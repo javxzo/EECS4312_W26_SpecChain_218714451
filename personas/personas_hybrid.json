@@ -2,30 +2,127 @@
   "personas": [
     {
       "id": "P_hybrid_1",
-      "name": "Frequent Fitness Logger",
-      "description": "A user who depends on the app for regular workout tracking and expects logging to work reliably during or immediately after exercise.",
+      "name": "Frustrated Technical User",
+      "description": "A regular Headspace user who relies on the app for daily meditation but becomes frustrated when technical issues such as crashes, slow loading, or connection problems interrupt sessions.",
       "derived_from_group": "H1",
       "goals": [
-        "Log workouts quickly",
-        "Track activities without interruption"
+        "Access meditation sessions reliably",
+        "Use the app without crashes or technical interruptions"
       ],
       "pain_points": [
-        "The app crashes while saving workouts",
-        "Previously entered activity data may disappear"
+        "Frequent app crashes",
+        "Sessions failing to load or connect",
+        "Slow performance during playback"
       ],
       "context": [
-        "Using the app during exercise sessions",
-        "Using the app outdoors or while moving"
+        "Using the app during daily meditation routines",
+        "Opening sessions during scheduled relaxation time"
       ],
       "constraints": [
-        "Workout logging must complete without crashing",
-        "Saved workout data must persist"
+        "Sessions must load quickly",
+        "Meditation playback must remain stable"
       ],
-      "evidence_reviews": [
-        "rev_12",
-        "rev_41"
+      "evidence_reviews": ["rev_1", "rev_6", "rev_34"],
+      "notes": "Refined from automated persona P_auto_2 (Frustrated Meditator). Merged with manual persona P1 to include specific connection failure pain points evidenced in both A2 and G1 review groups. Removed unsupported assumption about offline mode."
+    },
+    {
+      "id": "P_hybrid_2",
+      "name": "Cost-Conscious Meditation User",
+      "description": "A user interested in mindfulness and meditation who wants to explore the app but is discouraged by the large amount of content locked behind a subscription paywall.",
+      "derived_from_group": "H2",
+      "goals": [
+        "Access meditation content at a reasonable price",
+        "Evaluate whether the premium subscription is worth the cost"
       ],
-      "notes": "Refined the persona description and removed an unsupported assumption about synchronization."
+      "pain_points": [
+        "Most useful content locked behind paywalls",
+        "Subscription price feels too expensive",
+        "Limited functionality in the free version"
+      ],
+      "context": [
+        "Exploring meditation apps for stress management",
+        "Trying the free version before deciding to subscribe"
+      ],
+      "constraints": [
+        "Pricing must be clearly communicated",
+        "Some useful features should remain available without subscription"
+      ],
+      "evidence_reviews": ["rev_0", "rev_3", "rev_11"],
+      "notes": "Refined from automated persona P_auto_1 (Frustrated Health-Seeker). Merged with manual persona P2. Corrected the description to focus specifically on paywall concerns rather than general health app frustrations. Added pricing transparency constraint based on review evidence."
+    },
+    {
+      "id": "P_hybrid_3",
+      "name": "Sleep Improvement Seeker",
+      "description": "A user who depends on guided sleep stories and relaxation exercises in the app to reduce anxiety and improve sleep quality.",
+      "derived_from_group": "H5",
+      "goals": [
+        "Fall asleep more easily",
+        "Use guided sleep content to relax at night"
+      ],
+      "pain_points": [
+        "Difficulty relaxing before sleep",
+        "Sleep sessions sometimes difficult to locate"
+      ],
+      "context": [
+        "Listening to sleep stories at bedtime",
+        "Using relaxation exercises after stressful days"
+      ],
+      "constraints": [
+        "Audio playback must be smooth",
+        "Sleep content should be reachable within two navigation steps"
+      ],
+      "evidence_reviews": ["rev_20", "rev_45", "rev_61"],
+      "notes": "Refined from automated persona P_auto_5 (Frustrated but Loyal Meditator). Merged with manual persona P3. Focused scope on sleep and relaxation content specifically, removing vague feature request aspects. Updated constraint to be measurable."
+    },
+    {
+      "id": "P_hybrid_4",
+      "name": "Navigation-Frustrated User",
+      "description": "A user who enjoys the meditation content but becomes frustrated when interface changes or confusing navigation make it difficult to find sessions and courses.",
+      "derived_from_group": "H4",
+      "goals": [
+        "Navigate the app without confusion",
+        "Locate meditation sessions and courses within a few taps"
+      ],
+      "pain_points": [
+        "Confusing UI updates that relocate familiar features",
+        "Difficulty locating courses or daily sessions",
+        "Interface freezes during navigation"
+      ],
+      "context": [
+        "Searching for meditation programs in the app",
+        "Following guided meditation courses over multiple sessions"
+      ],
+      "constraints": [
+        "Navigation structure must remain consistent across updates",
+        "Core features must be reachable within three interactions from the home screen"
+      ],
+      "evidence_reviews": ["rev_9", "rev_56", "rev_101"],
+      "notes": "Refined from automated persona P_auto_4 (Frustrated User). Merged with manual persona P4. Removed vague references to general usability and replaced with specific navigation constraints grounded in review evidence. Technical crash complaints moved to H1."
+    },
+    {
+      "id": "P_hybrid_5",
+      "name": "Dissatisfied Subscriber",
+      "description": "A paying Headspace user who expects reliable service, fair billing practices, and responsive customer support when issues arise.",
+      "derived_from_group": "H3",
+      "goals": [
+        "Manage and cancel subscriptions without friction",
+        "Resolve billing or technical issues through accessible support"
+      ],
+      "pain_points": [
+        "Unexpected subscription renewals without prior notification",
+        "Slow or unhelpful customer support responses",
+        "Difficulty obtaining refunds"
+      ],
+      "context": [
+        "Managing subscription settings within the app",
+        "Contacting support regarding unexpected billing charges"
+      ],
+      "constraints": [
+        "Renewal notifications must be sent before the billing date",
+        "Support contact options must be accessible from account settings"
+      ],
+      "evidence_reviews": ["rev_51", "rev_88", "rev_339"],
+      "notes": "Refined from automated persona P_auto_3 (Frustrated Health App User). Merged with manual persona P5. Added renewal notification constraint based on strong review evidence. Removed unsupported assumption about chat support availability."
     }
   ]
 }

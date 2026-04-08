@@ -1,16 +1,251 @@
 {
   "tests": [
     {
-      "test_id": "T_hybrid_1",
+      "test_id": "T_hybrid_1a",
       "requirement_id": "FR_hybrid_1",
-      "scenario": "Save a workout entry without crashing",
+      "scenario": "Free user can browse and play free meditation sessions",
       "steps": [
-        "Open the workout logging feature",
-        "Enter workout information",
-        "Submit the workout"
+        "Open the Headspace application without an active subscription",
+        "Navigate to the meditation library",
+        "Locate a session marked as free",
+        "Press play on the free session"
       ],
-      "expected_result": "The workout is saved successfully and the application does not crash.",
-      "notes": "Revised the expected result to match the updated hybrid requirement."
+      "expected_result": "The free meditation session begins playback without requiring a subscription.",
+      "notes": "Revised expected result to confirm playback rather than just display."
+    },
+    {
+      "test_id": "T_hybrid_1b",
+      "requirement_id": "FR_hybrid_1",
+      "scenario": "At least 5 free sessions are visible in the library",
+      "steps": [
+        "Open the Headspace application without an active subscription",
+        "Navigate to the meditation library",
+        "Count the number of sessions accessible without a subscription"
+      ],
+      "expected_result": "At least 5 meditation sessions are accessible to the user without a premium subscription.",
+      "notes": "New test added to verify the minimum count requirement introduced in FR_hybrid_1."
+    },
+    {
+      "test_id": "T_hybrid_2a",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "Application loads home screen within 5 seconds on launch",
+      "steps": [
+        "Ensure the device has an active internet connection",
+        "Launch the Headspace application",
+        "Start a timer at launch and stop it when the home screen appears"
+      ],
+      "expected_result": "The home screen loads and content is visible within 5 seconds of launch.",
+      "notes": "Added timer step to make the test measurable, matching the 5-second threshold in FR_hybrid_2."
+    },
+    {
+      "test_id": "T_hybrid_2b",
+      "requirement_id": "FR_hybrid_2",
+      "scenario": "Application reconnects after a temporary network interruption",
+      "steps": [
+        "Open the Headspace application",
+        "Disable the device internet connection briefly",
+        "Re-enable the internet connection",
+        "Observe whether the application recovers"
+      ],
+      "expected_result": "The application reconnects to the server and content becomes accessible without requiring a manual restart.",
+      "notes": "Retained from original hybrid test. Added final step for clarity."
+    },
+    {
+      "test_id": "T_hybrid_3a",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "Meditation session plays without crashing",
+      "steps": [
+        "Open the Headspace application",
+        "Select any available meditation session",
+        "Press the play button",
+        "Allow the session to play for at least 2 minutes"
+      ],
+      "expected_result": "The application remains stable and does not crash during the 2-minute playback.",
+      "notes": "Extended duration from original test to better stress-test stability."
+    },
+    {
+      "test_id": "T_hybrid_3b",
+      "requirement_id": "FR_hybrid_3",
+      "scenario": "Consecutive session launches do not cause crashes",
+      "steps": [
+        "Open the Headspace application",
+        "Play a meditation session and exit it",
+        "Immediately select and play a second session",
+        "Exit and repeat once more with a third session"
+      ],
+      "expected_result": "All three sessions launch and play without the application crashing or becoming unresponsive.",
+      "notes": "New test to cover repeated session launch scenario reported in H1 reviews."
+    },
+    {
+      "test_id": "T_hybrid_4a",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Meditation session reachable within three taps from home screen",
+      "steps": [
+        "Open the Headspace application to the home screen",
+        "Navigate toward a specific meditation session",
+        "Count the number of taps required to reach the session"
+      ],
+      "expected_result": "The user reaches the meditation session within three taps from the home screen.",
+      "notes": "Rewritten from original T_hybrid_3a which tested navigation broadly. Now directly validates the three-tap constraint in FR_hybrid_4."
+    },
+    {
+      "test_id": "T_hybrid_4b",
+      "requirement_id": "FR_hybrid_4",
+      "scenario": "Navigation remains functional after an app update",
+      "steps": [
+        "Note the location of key sections before an update",
+        "Install the latest version of the Headspace application",
+        "Navigate to the same sections after the update",
+        "Count interactions needed to reach a meditation session"
+      ],
+      "expected_result": "Key sections remain accessible within three taps and no previously known feature is missing without explanation.",
+      "notes": "Merged from manual T_manual_8a. Post-update navigation consistency is a key concern in H4 reviews."
+    },
+    {
+      "test_id": "T_hybrid_5a",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Sleep section is reachable from the main navigation",
+      "steps": [
+        "Open the Headspace application",
+        "Open the main navigation menu",
+        "Locate and tap the sleep or relaxation section"
+      ],
+      "expected_result": "The sleep section opens and displays a list of available sleep stories and relaxation sessions.",
+      "notes": "Retained from original hybrid test with clearer step descriptions."
+    },
+    {
+      "test_id": "T_hybrid_5b",
+      "requirement_id": "FR_hybrid_5",
+      "scenario": "Search returns sleep content results",
+      "steps": [
+        "Open the Headspace application",
+        "Use the search function and enter the term 'sleep'",
+        "Review the results displayed"
+      ],
+      "expected_result": "At least one sleep story or relaxation session appears in the search results.",
+      "notes": "New test added to verify discoverability via search, complementing the navigation test."
+    },
+    {
+      "test_id": "T_hybrid_6a",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "Audio continues uninterrupted after screen lock",
+      "steps": [
+        "Open the Headspace application",
+        "Start a sleep story or meditation audio session",
+        "Lock the device screen while audio is playing",
+        "Wait 2 minutes and unlock the screen"
+      ],
+      "expected_result": "Audio playback continues without interruption during and after the screen lock.",
+      "notes": "New test covering the screen-lock scenario added in FR_hybrid_6."
+    },
+    {
+      "test_id": "T_hybrid_6b",
+      "requirement_id": "FR_hybrid_6",
+      "scenario": "Audio plays continuously for an extended session",
+      "steps": [
+        "Open the Headspace application",
+        "Start a sleep story",
+        "Allow playback without any interaction for at least 10 minutes"
+      ],
+      "expected_result": "Audio plays continuously for the full 10 minutes without pausing or stopping unexpectedly.",
+      "notes": "New test to validate sustained playback stability during typical sleep-use sessions."
+    },
+    {
+      "test_id": "T_hybrid_7a",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "Subscription pricing shown before payment prompt",
+      "steps": [
+        "Open the Headspace application without an active subscription",
+        "Select a premium meditation session",
+        "Observe what is displayed before any payment option"
+      ],
+      "expected_result": "Subscription plan prices are displayed before the user is presented with a payment or sign-up prompt.",
+      "notes": "New test validating the pricing transparency requirement in FR_hybrid_7."
+    },
+    {
+      "test_id": "T_hybrid_7b",
+      "requirement_id": "FR_hybrid_7",
+      "scenario": "All subscription tiers are listed on the pricing screen",
+      "steps": [
+        "Open the Headspace application without a subscription",
+        "Navigate to the subscription or upgrade screen",
+        "Review the plan options displayed"
+      ],
+      "expected_result": "All available subscription plans and their prices are listed and visually distinguishable.",
+      "notes": "Merged from manual T_manual_3b. Ensures users can compare plan options before committing."
+    },
+    {
+      "test_id": "T_hybrid_8a",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "User cancels subscription through account settings",
+      "steps": [
+        "Open the Headspace application with an active subscription",
+        "Navigate to account settings",
+        "Select subscription management",
+        "Choose to cancel the subscription"
+      ],
+      "expected_result": "The cancellation completes successfully and a confirmation message is displayed.",
+      "notes": "Retained from manual T_manual_9a. Added confirmation message to expected result per FR_hybrid_8."
+    },
+    {
+      "test_id": "T_hybrid_8b",
+      "requirement_id": "FR_hybrid_8",
+      "scenario": "Renewal date and amount shown before cancellation",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to account settings and open subscription management",
+        "Review the subscription details screen before cancelling"
+      ],
+      "expected_result": "The next renewal date and billing amount are displayed on the subscription details screen.",
+      "notes": "Retained from manual T_manual_9b. Validates billing transparency before cancellation."
+    },
+    {
+      "test_id": "T_hybrid_9a",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Renewal notification sent 3 days before billing date",
+      "steps": [
+        "Set up an active auto-renewing subscription",
+        "Wait until 3 days before the renewal date",
+        "Check for a push notification or email from Headspace"
+      ],
+      "expected_result": "The user receives a notification at least 3 days before renewal showing the charge amount and renewal date.",
+      "notes": "New test for the renewal notification requirement added in FR_hybrid_9, not present in auto pipeline."
+    },
+    {
+      "test_id": "T_hybrid_9b",
+      "requirement_id": "FR_hybrid_9",
+      "scenario": "Notification includes correct renewal amount and date",
+      "steps": [
+        "Receive the renewal notification",
+        "Open the notification and verify its contents",
+        "Cross-reference the amount with the subscription details screen"
+      ],
+      "expected_result": "The notification shows the correct renewal date and billing amount matching the subscription plan.",
+      "notes": "New test to validate the accuracy of renewal notification content."
+    },
+    {
+      "test_id": "T_hybrid_10a",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Support contact option visible in help section",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to the help or support section",
+        "Look for a contact support option"
+      ],
+      "expected_result": "At least one contact method such as a web form, email, or chat link is visible in the support section.",
+      "notes": "Retained from manual T_manual_10a with updated requirement ID."
+    },
+    {
+      "test_id": "T_hybrid_10b",
+      "requirement_id": "FR_hybrid_10",
+      "scenario": "Support option accessible from subscription settings",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to account or subscription settings",
+        "Look for a link or button to contact support"
+      ],
+      "expected_result": "A support contact option is available directly from the subscription or billing settings screen.",
+      "notes": "Retained from manual T_manual_10b. Validates support is reachable from the context where billing issues arise."
     }
   ]
 }

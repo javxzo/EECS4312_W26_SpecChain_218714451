@@ -1,13 +1,59 @@
-{  "groups": [
+{
+  "groups": [
     {
       "group_id": "H1",
-      "theme": "Workout logging failures during activity tracking",
-      "review_ids": ["rev_12", "rev_33", "rev_41", "rev_92"],
+      "theme": "Technical bugs, crashes, and app instability",
+      "review_ids": ["rev_1","rev_2","rev_5","rev_6","rev_15","rev_34","rev_39","rev_53","rev_54","rev_62","rev_68","rev_74","rev_105","rev_154"],
       "example_reviews": [
-        "The app crashes whenever I try to log a run.",
-        "Logging workouts causes the app to freeze."
+        "initially give star review however app buggy point unusable frequently connect internet despite app work full signal connect take age load would great headspace team could look improve functionality app",
+        "practically unusable",
+        "crash sleepcast star quite recent issue late I guess I android please fix ill change rating star usually deserve"
       ],
-      "notes": "Removed one unrelated review about login problems from the original automated group."
+      "notes": "Merged A2 (Technical Issues and Bugs) with G1 (App crashes and technical bugs). Removed duplicates and focused only on instability, crashes, and connection issues."
+    },
+    {
+      "group_id": "H2",
+      "theme": "Subscription pricing, paywalls, and cost concerns",
+      "review_ids": ["rev_0","rev_3","rev_4","rev_7","rev_8","rev_11","rev_12","rev_25","rev_30","rev_38","rev_50","rev_99","rev_129","rev_133","rev_136","rev_160","rev_179"],
+      "example_reviews": [
+        "completely paywalled quid subscription year overpriced worth",
+        "content lock behind paywall",
+        "I terrible sleep entire sleep aid part app lock behind pay wall I money pay sound"
+      ],
+      "notes": "Merged A1 (Paywall and Cost Concerns) with G2 (Subscription Pricing/Paywall). Removed reviews that were mainly about technical issues instead of pricing."
+    },
+    {
+      "group_id": "H3",
+      "theme": "Subscription management, renewals, and cancellation complaints",
+      "review_ids": ["rev_13","rev_14","rev_16","rev_17","rev_20","rev_51","rev_80","rev_88","rev_89","rev_94","rev_109","rev_339","rev_554","rev_734","rev_743","rev_768","rev_814","rev_1020","rev_1037"],
+      "example_reviews": [
+        "beware advertise day free trial I charge annual subscription immediately",
+        "avoid app want get anyway extremely careful headspace send subscription reminder charge",
+        "poor app poor customer support high cost issue renewal without inform refund policy"
+      ],
+      "notes": "Combined A3 (Subscription and Cancellation Issues) with G5 (Poor Customer Support/Renewal Charges). Focused on billing, renewal disputes, refunds, and support complaints."
+    },
+    {
+      "group_id": "H4",
+      "theme": "UI design, navigation problems, and usability frustrations",
+      "review_ids": ["rev_9","rev_18","rev_19","rev_21","rev_22","rev_31","rev_32","rev_40","rev_42","rev_56","rev_101","rev_122","rev_132","rev_167","rev_209","rev_217","rev_368","rev_379"],
+      "example_reviews": [
+        "sleepcast great app get bad time ui freeze lot almost unusable need spend qa",
+        "different ui update great app mess timeline daily meditation",
+        "app look busy remind I social medium I try avoid stimulation get headspace simple layout well fast easy navigate"
+      ],
+      "notes": "Merged A4 (App Performance and Usability) with G4 (UI & navigation issues). Technical crashes were removed and placed in the bug category."
+    },
+    {
+      "group_id": "H5",
+      "theme": "Meditation, sleep content, and feature suggestions",
+      "review_ids": ["rev_10","rev_23","rev_24","rev_26","rev_27","rev_43","rev_45","rev_56","rev_61","rev_67","rev_69","rev_73","rev_82","rev_84","rev_86","rev_88"],
+      "example_reviews": [
+        "wonderful magical healing mindset regulator love",
+        "sometimes I use app meditation stop",
+        "good app please please make setting turn haptic feedback I press button I really like sensation I try relax"
+      ],
+      "notes": "Merged A5 (Feature Requests and Suggestions) with G3 (Sleep and relaxation content). Focused on feedback related to meditation features, relaxation content, and improvement suggestions."
     }
   ]
 }

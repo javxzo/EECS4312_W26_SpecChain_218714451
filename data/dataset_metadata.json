@@ -1,0 +1,14 @@
+{
+  "app_name": "Headspace",
+  "collection_method": "google-play-scraper",
+  "dataset_size": 1978,
+  "cleaning_steps": [
+    "removed duplicates",
+    "removed empty reviews",
+    "lowercased text",
+    "removed punctuation and special characters",
+    "removed stopwords",
+    "lemmatized words",
+    "removed extra whitespace"
+  ]
+}

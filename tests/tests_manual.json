@@ -1,16 +1,225 @@
-
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
-      "requirement_id": "FR1",
-      "scenario": "Workout Logging Stability",
+      "test_id": "T_manual_1a",
+      "requirement_id": "FR_manual_1",
+      "scenario": "Meditation Playback Stability",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Open the Headspace application",
+        "Select a meditation session",
+        "Press the play button"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The meditation session loads and begins playback without the application crashing."
+    },
+    {
+      "test_id": "T_manual_1b",
+      "requirement_id": "FR_manual_1",
+      "scenario": "Repeated Playback Without Crash",
+      "steps": [
+        "Open the Headspace application",
+        "Select and play a meditation session",
+        "Exit the session and immediately select a different session",
+        "Press play again"
+      ],
+      "expected_result": "The second session also loads and plays without crashing or freezing."
+    },
+    {
+      "test_id": "T_manual_2a",
+      "requirement_id": "FR_manual_2",
+      "scenario": "Session Loading Time Under Normal Network",
+      "steps": [
+        "Open the Headspace application on a stable internet connection",
+        "Select a meditation session",
+        "Start a timer and observe when playback begins"
+      ],
+      "expected_result": "The meditation session begins playback within 3 seconds."
+    },
+    {
+      "test_id": "T_manual_2b",
+      "requirement_id": "FR_manual_2",
+      "scenario": "Loading Indicator Shown While Session Fetches",
+      "steps": [
+        "Open the Headspace application",
+        "Select a meditation session on a slower connection",
+        "Observe the UI while the session loads"
+      ],
+      "expected_result": "The application displays a loading indicator and does not appear frozen while fetching the session."
+    },
+    {
+      "test_id": "T_manual_3a",
+      "requirement_id": "FR_manual_3",
+      "scenario": "Pricing Displayed Before Premium Access",
+      "steps": [
+        "Open the Headspace application without an active subscription",
+        "Navigate to a premium meditation session",
+        "Attempt to access the session"
+      ],
+      "expected_result": "Subscription pricing information is displayed before the user is asked to pay."
+    },
+    {
+      "test_id": "T_manual_3b",
+      "requirement_id": "FR_manual_3",
+      "scenario": "Multiple Subscription Tiers Listed",
+      "steps": [
+        "Open the Headspace application without an active subscription",
+        "Navigate to the subscription or upgrade screen",
+        "Review the available plans"
+      ],
+      "expected_result": "All available subscription plans and their prices are listed and distinguishable from one another."
+    },
+    {
+      "test_id": "T_manual_4a",
+      "requirement_id": "FR_manual_4",
+      "scenario": "Free User Can Access Session Preview",
+      "steps": [
+        "Open the Headspace application without a subscription",
+        "Browse premium meditation sessions",
+        "Select a session and attempt to preview it"
+      ],
+      "expected_result": "The user can access a limited preview of the session without subscribing."
+    },
+    {
+      "test_id": "T_manual_4b",
+      "requirement_id": "FR_manual_4",
+      "scenario": "Preview Ends With Subscription Prompt",
+      "steps": [
+        "Open the Headspace application without a subscription",
+        "Start a preview of a premium meditation session",
+        "Wait for the preview to conclude"
+      ],
+      "expected_result": "After the preview ends, the system prompts the user to subscribe to continue."
+    },
+    {
+      "test_id": "T_manual_5a",
+      "requirement_id": "FR_manual_5",
+      "scenario": "Sleep Section Discoverable From Main Navigation",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to the main menu or home screen",
+        "Locate and open the sleep or relaxation section"
+      ],
+      "expected_result": "The sleep section is accessible from the main navigation and displays available sleep content."
+    },
+    {
+      "test_id": "T_manual_5b",
+      "requirement_id": "FR_manual_5",
+      "scenario": "Search Returns Sleep Content",
+      "steps": [
+        "Open the Headspace application",
+        "Use the search feature and enter the term 'sleep'",
+        "Review the results"
+      ],
+      "expected_result": "The search results include relevant sleep stories and relaxation sessions."
+    },
+    {
+      "test_id": "T_manual_6a",
+      "requirement_id": "FR_manual_6",
+      "scenario": "Continuous Audio Playback for Extended Duration",
+      "steps": [
+        "Open the Headspace application",
+        "Select a sleep story or meditation audio",
+        "Start playback and let it run for at least 5 minutes without interaction"
+      ],
+      "expected_result": "Audio plays continuously without pausing, buffering excessively, or stopping unexpectedly."
+    },
+    {
+      "test_id": "T_manual_6b",
+      "requirement_id": "FR_manual_6",
+      "scenario": "Audio Continues After Screen Lock",
+      "steps": [
+        "Open the Headspace application",
+        "Start a sleep story or meditation audio",
+        "Lock the device screen while audio is playing"
+      ],
+      "expected_result": "Audio playback continues uninterrupted after the screen is locked."
+    },
+    {
+      "test_id": "T_manual_7a",
+      "requirement_id": "FR_manual_7",
+      "scenario": "Meditation Program Reachable Within Three Steps",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate toward the meditation programs section",
+        "Count the number of taps required to reach a specific course"
+      ],
+      "expected_result": "The user reaches a meditation course within three navigation steps from the home screen."
+    },
+    {
+      "test_id": "T_manual_7b",
+      "requirement_id": "FR_manual_7",
+      "scenario": "Courses Listed With Clear Labels",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to the meditation programs section",
+        "Review the list of available courses"
+      ],
+      "expected_result": "Each course is displayed with a clear title and description to help the user choose."
+    },
+    {
+      "test_id": "T_manual_8a",
+      "requirement_id": "FR_manual_8",
+      "scenario": "Key Features Remain in Same Location After Update",
+      "steps": [
+        "Note the location of key features before an update",
+        "Install the latest application update",
+        "Navigate to the same features after the update"
+      ],
+      "expected_result": "Key features are accessible from the same location or a clear in-app message explains any changes."
+    },
+    {
+      "test_id": "T_manual_8b",
+      "requirement_id": "FR_manual_8",
+      "scenario": "No Unexplained Navigation Changes on First Post-Update Launch",
+      "steps": [
+        "Open the Headspace application for the first time after an update",
+        "Navigate through the main sections",
+        "Check whether previously known features are missing or relocated without explanation"
+      ],
+      "expected_result": "All major features are present and either unchanged in location or accompanied by an explanation."
+    },
+    {
+      "test_id": "T_manual_9a",
+      "requirement_id": "FR_manual_9",
+      "scenario": "Subscription Cancellation Completes Within App",
+      "steps": [
+        "Open the Headspace application with an active subscription",
+        "Navigate to account settings",
+        "Access subscription management and select cancel"
+      ],
+      "expected_result": "The cancellation flow completes successfully and the user receives confirmation."
+    },
+    {
+      "test_id": "T_manual_9b",
+      "requirement_id": "FR_manual_9",
+      "scenario": "Renewal Date Visible Before Cancellation",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to account settings and open subscription management",
+        "Review the subscription details screen"
+      ],
+      "expected_result": "The next renewal date and billing amount are displayed before the user initiates cancellation."
+    },
+    {
+      "test_id": "T_manual_10a",
+      "requirement_id": "FR_manual_10",
+      "scenario": "Customer Support Contact Option Is Visible",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to the help or support section",
+        "Locate a way to contact customer support"
+      ],
+      "expected_result": "At least one contact option such as a form, email, or chat is accessible from the support section."
+    },
+    {
+      "test_id": "T_manual_10b",
+      "requirement_id": "FR_manual_10",
+      "scenario": "Support Reachable From Billing Settings",
+      "steps": [
+        "Open the Headspace application",
+        "Navigate to account or subscription settings",
+        "Locate a link or button to contact support regarding billing"
+      ],
+      "expected_result": "A support contact option is available directly from the subscription or billing settings screen."
     }
   ]
 }

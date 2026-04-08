@@ -1,22 +1,113 @@
-{  "personas": [
+{
+  "personas": [
     {
       "id": "P1",
-      "name": "Frequent Activity Tracker",
-      "description": "A user who relies on the app to log workouts frequently and expects stable performance.",
+      "name": "Frustrated Technical User",
+      "description": "A regular Headspace user who depends on the app for daily meditation but becomes frustrated when technical issues prevent sessions from loading or the app crashes.",
       "derived_from_group": "G1",
       "goals": [
-        "Track workouts consistently",
-        "Log activity quickly"      ],
+        "Access meditation sessions reliably",
+        "Use the app without crashes or bugs"
+      ],
       "pain_points": [
-        "App crashes during logging",
-        "Workout data sometimes disappears"      ],
+        "Frequent app crashes",
+        "Sessions failing to load or connect"
+      ],
       "context": [
-        "Logging activities immediately after workouts",
-        "Using the app during outdoor exercise"      ],
+        "Using the app daily for meditation practice",
+        "Opening sessions during scheduled relaxation time"
+      ],
       "constraints": [
-        "Logging must be reliable",
-        "Data should not be lost"       ],
-      "evidence_reviews": [
-        "rev_12",
-        "rev_45"      ]
-    }  ] }
+        "The app must load sessions quickly",
+        "Meditation playback should not crash"
+      ],
+      "evidence_reviews": ["rev_1", "rev_34"]
+    },
+    {
+      "id": "P2",
+      "name": "Cost-Conscious User",
+      "description": "A user interested in meditation and mindfulness but hesitant to subscribe because most content is locked behind a paywall.",
+      "derived_from_group": "G2",
+      "goals": [
+        "Access meditation content at a reasonable price",
+        "Evaluate the value of the subscription"
+      ],
+      "pain_points": [
+        "Most content locked behind paywalls",
+        "Subscription price feels too expensive"
+      ],
+      "context": [
+        "Exploring the free version of the app",
+        "Considering whether to upgrade to premium"
+      ],
+      "constraints": [
+        "Users should understand pricing clearly",
+        "Some useful features should remain accessible without subscription"
+      ],
+      "evidence_reviews": ["rev_0", "rev_11"]
+    },
+    {
+      "id": "P3",
+      "name": "Sleep Improvement Seeker",
+      "description": "A user who relies on guided sleep content and relaxation exercises to improve sleep quality and reduce stress.",
+      "derived_from_group": "G3",
+      "goals": ["Fall asleep more easily", "Use relaxation content to unwind"],
+      "pain_points": [
+        "Difficulty relaxing before sleep",
+        "Needs calming guided content"
+      ],
+      "context": [
+        "Using sleep stories at night",
+        "Listening to relaxation exercises before bedtime"
+      ],
+      "constraints": [
+        "Audio playback must be smooth",
+        "Sleep content should be easy to access"
+      ],
+      "evidence_reviews": ["rev_20", "rev_45"]
+    },
+    {
+      "id": "P4",
+      "name": "Navigation-Frustrated User",
+      "description": "A user who values meditation features but struggles with confusing interface updates and difficulty finding content.",
+      "derived_from_group": "G4",
+      "goals": ["Navigate the app easily", "Find meditation sessions quickly"],
+      "pain_points": [
+        "Confusing UI changes",
+        "Difficulty locating courses or sessions"
+      ],
+      "context": [
+        "Searching for meditation programs",
+        "Trying to follow guided courses in the app"
+      ],
+      "constraints": [
+        "Navigation should remain consistent across updates",
+        "Important features must be easy to locate"
+      ],
+      "evidence_reviews": ["rev_9", "rev_101"]
+    },
+    {
+      "id": "P5",
+      "name": "Dissatisfied Subscriber",
+      "description": "A paying user who expects fair billing practices and responsive customer support when issues occur.",
+      "derived_from_group": "G5",
+      "goals": [
+        "Manage subscriptions easily",
+        "Resolve issues quickly with customer support"
+      ],
+      "pain_points": [
+        "Unexpected subscription renewals",
+        "Slow or unhelpful customer support"
+      ],
+      "context": [
+        "Contacting support regarding billing issues",
+        "Managing subscription settings within the app"
+      ],
+      "constraints": [
+        "Billing must be transparent",
+        "Support responses should be timely"
+      ],
+      "evidence_reviews": ["rev_51", "rev_88"]
+    }
+  ]
+}

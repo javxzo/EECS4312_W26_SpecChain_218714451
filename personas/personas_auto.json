@@ -1,0 +1,157 @@
+{
+  "personas": [
+    {
+      "id": "P_auto_1",
+      "name": "Frustrated Meditation Seeker",
+      "description": "This persona is frustrated with the paywall and subscription model of a meditation app, seeking free or affordable access to mental health resources. They value meditation guidance but are put off by the cost.",
+      "derived_from_group": "A1",
+      "goals": [
+        "Access meditation guidance",
+        "Find affordable mental health resources"
+      ],
+      "pain_points": [
+        "Paywall blocking access to content",
+        "Subscription model perceived as overpriced"
+      ],
+      "context": [
+        "Seeking mental health support",
+        "Exploring meditation apps"
+      ],
+      "constraints": [
+        "Limited budget for mental health resources",
+        "Frustration with paywalls and subscription models"
+      ],
+      "evidence_reviews": [
+        0,
+        3,
+        4,
+        30,
+        99
+      ]
+    },
+    {
+      "id": "P_auto_2",
+      "name": "Frustrated Technical User",
+      "description": "This user experiences frequent technical issues with the app, including bugs, glitches, and crashes, which hinder their ability to use it effectively. They are often unable to access sessions or use the app offline, despite having a stable internet connection. They value the app's features but are frustrated by its performance.",
+      "derived_from_group": "A2",
+      "goals": [
+        "To use the app for meditation and sleep without technical issues",
+        "To access sessions and content without interruptions"
+      ],
+      "pain_points": [
+        "Frequent app crashes and glitches",
+        "Inability to access sessions or use the app offline",
+        "Poor performance despite stable internet connection"
+      ],
+      "context": [
+        "Using the app for meditation and sleep",
+        "Encountering technical issues on Android devices",
+        "Trying to access sessions and content without interruptions"
+      ],
+      "constraints": [
+        "Stable internet connection not always available",
+        "Technical issues limit app usage"
+      ],
+      "evidence_reviews": [
+        1,
+        2,
+        5,
+        6,
+        40
+      ]
+    },
+    {
+      "id": "P_auto_3",
+      "name": "Frustrated Headspace User",
+      "description": "A long-time user of Headspace who loves the content but is frustrated with the app's unstable performance, cluttered UI, and poor customer support. They value ease of navigation and simple course guidance, but face issues with crashes, audio problems, and difficulty reaching support. Despite this, they highly recommend the app's content for managing anxiety and improving sleep.",
+      "derived_from_group": "A3",
+      "goals": [
+        "To easily access and navigate meditation content",
+        "To manage anxiety and improve sleep through meditation"
+      ],
+      "pain_points": [
+        "App crashes and instability",
+        "Cluttered and complicated UI",
+        "Poor customer support",
+        "Audio issues during meditation sessions"
+      ],
+      "context": [
+        "Using the app daily for meditation and stress relief",
+        "Trying to find simple and easy-to-use meditation content"
+      ],
+      "constraints": [
+        "Limited patience for complicated UI and technical issues",
+        "Willingness to pay for content but expects reliable performance"
+      ],
+      "evidence_reviews": [
+        9,
+        11,
+        24,
+        31,
+        34
+      ]
+    },
+    {
+      "id": "P_auto_4",
+      "name": "Frustrated Mobile User",
+      "description": "This persona is a mobile user who experiences frustration with the app's performance, customer support, and refund policies. They struggle with app crashes, slow functionality, and difficulties in getting refunds or resolving issues with their subscription.",
+      "derived_from_group": "A4",
+      "goals": [
+        "Get a functional meditation app",
+        "Resolve subscription and refund issues easily"
+      ],
+      "pain_points": [
+        "App crashes frequently",
+        "Poor customer support",
+        "Difficulties with refunds and subscription management",
+        "Slow app performance"
+      ],
+      "context": [
+        "Using the app on a mobile device (Samsung Galaxy)",
+        "Trying to meditate and use the app's features",
+        "Dealing with subscription and refund issues"
+      ],
+      "constraints": [
+        "Limited technical expertise (has to ask for help)",
+        "Frustrated with app performance and support"
+      ],
+      "evidence_reviews": [
+        15,
+        16,
+        21,
+        27,
+        35
+      ]
+    },
+    {
+      "id": "P_auto_5",
+      "name": "Frustrated but Seeking Calmness Enthusiast",
+      "description": "This persona seeks relaxation and calmness through meditation apps but faces difficulties with login, subscription, and navigation. They have had both positive and negative experiences with various apps.",
+      "derived_from_group": "A5",
+      "goals": [
+        "To easily access and use meditation apps for relaxation",
+        "To find an affordable and suitable subscription plan"
+      ],
+      "pain_points": [
+        "Difficulty logging into apps due to credential issues",
+        "Frustration with subscription models and unexpected charges",
+        "Trouble navigating app interfaces"
+      ],
+      "context": [
+        "Using apps daily for meditation and relaxation",
+        "Trying out different apps to find one that works well"
+      ],
+      "constraints": [
+        "Limited budget for app subscriptions",
+        "Frustration with technical issues and poor customer service"
+      ],
+      "evidence_reviews": [
+        7,
+        8,
+        10,
+        12,
+        13
+      ]
+    }
+  ]
+}

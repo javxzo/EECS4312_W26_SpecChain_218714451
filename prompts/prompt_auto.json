@@ -1,3 +1,34 @@
 {
-    "prompt": ""
+  "review_grouping": {
+    "task": "review_grouping",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "prompt": {
+      "system_prompt": "You are a requirements engineering assistant. Your task is to group user reviews into thematic clusters that represent distinct types of users or user situations for a mindfulness/meditation app.",
+      "user_prompt_template": "Below are {SAMPLE_SIZE} cleaned user reviews (id: text) for the Headspace app.\n\n{numbered_reviews}\n\nGroup these reviews into exactly {NUM_GROUPS} thematic groups. Each group should represent a distinct type of user concern or situation. Each group must contain at least {MIN_PER_GROUP} review IDs.\n\nRespond ONLY with a valid JSON object in exactly this format, no preamble:\n{\n  \"groups\": [\n    {\n      \"group_id\": \"A1\",\n      \"theme\": \"<short theme label>\",\n      \"review_ids\": [<list of integer IDs>],\n      \"example_reviews\": [\"<verbatim review text 1>\", \"<verbatim review text 2>\"]\n    }\n  ]\n}"
+    }
+  },
+  "persona_generation": {
+    "task": "persona_generation",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "prompt": {
+      "system_prompt": "You are a requirements engineering assistant specialising in user research. Create detailed, grounded personas based only on evidence from the provided reviews.",
+      "user_prompt_template": "The following reviews represent users in the theme: '{group_theme}'\n\n{sample_reviews_formatted}\n\nCreate ONE persona for this user group. Base every field strictly on evidence from the reviews above. Do not invent details.\n\nRespond ONLY with a valid JSON object in exactly this format:\n{\n  \"id\": \"{persona_id}\",\n  \"name\": \"<descriptive persona name>\",\n  \"description\": \"<2-3 sentence description grounded in review evidence>\",\n  \"derived_from_group\": \"{group_id}\",\n  \"goals\": [\"<goal 1>\", \"<goal 2>\"],\n  \"pain_points\": [\"<pain point 1>\", \"<pain point 2>\"],\n  \"context\": [\"<usage context 1>\", \"<usage context 2>\"],\n  \"constraints\": [\"<constraint 1>\", \"<constraint 2>\"],\n  \"evidence_reviews\": [<list of review IDs used as evidence>]\n}"
+    }
+  },
+  "spec_generation": {
+    "task": "spec_generation",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "prompt": {
+      "system_prompt": "You are a requirements engineering assistant. Your task is to derive precise, testable software requirements from user personas. Each requirement must follow the IEEE 830 'shall' convention and include measurable acceptance criteria.",
+      "user_prompt_template": "Persona: {persona_name}\nDescription: {persona_description}\nGoals: {persona_goals}\nPain Points: {persona_pain_points}\nConstraints: {persona_constraints}\nDerived from review group: {group_id} — '{group_theme}'\n\nGenerate exactly {REQS_PER_PERSONA} distinct software requirements for the Headspace app motivated by this persona. Each requirement must:\n- Use 'The system shall...' phrasing\n- Have specific, measurable acceptance criteria in Given/When/Then format\n- Not use vague terms like 'fast', 'easy', 'better', or 'user-friendly'\n\nRespond ONLY with a valid JSON array, no preamble:\n[\n  {\n    \"description\": \"The system shall ...\",\n    \"acceptance_criteria\": \"Given ... When ... Then ...\"\n  }\n]"
+    }
+  },
+  "test_generation": {
+    "task": "test_generation",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "prompt": {
+      "system_prompt": "You are a QA engineer writing validation test scenarios for a mindfulness mobile app. Each test must be concrete, executable, and directly verify the stated requirement.",
+      "user_prompt_template": "Requirement ID: {requirement_id}\nDescription: {description}\nAcceptance Criteria: {acceptance_criteria}\nSource Persona: {source_persona}\n\nWrite exactly {TESTS_PER_REQ} test scenarios that validate this requirement. Each scenario should test a different situation (normal use and edge case). Steps must be real actions a tester performs in the Headspace mobile app.\n\nRespond ONLY with valid JSON in this exact format:\n[\n  {\n    \"scenario\": \"Scenario title\",\n    \"steps\": [\"Step 1\", \"Step 2\", \"Step 3\"],\n    \"expected_result\": \"Expected outcome\"\n  }\n]"
+    }
+  }
 }

@@ -2,11 +2,47 @@
   "groups": [
     {
       "group_id": "G1",
-      "theme": "App crashes during activity logging, THIS IS A AN EXAMPLE, PLEASE REMOVE ",
-      "review_ids": ["rev_12", "rev_33", "rev_45", "rev_89"],
+      "theme": "App crashes and technical bugs",
+      "review_ids": [1,2,6,15,34,39,53,54,62,68],
       "example_reviews": [
-        "The app crashes every time I log my run.",
-        "Logging workouts causes the app to freeze."
+        "initially give star review however app buggy point unusable frequently connect internet despite app work full signal connect take age load would great headspace team could look improve functionality app",
+        "already sub unable access session week I loyal user since first time I problem change even I uninstall redownload time"
+      ]
+    },
+    {
+      "group_id": "G2",
+      "theme": "Subscription Pricing/Paywall",
+      "review_ids": [0,3,11,12,15,25,38,50,129,133],
+      "example_reviews": [
+        "completely paywalled quid subscription year overpriced worth",
+        "content lock behind paywall"
+      ]
+    },
+    {
+      "group_id": "G3",
+      "theme": "Sleep and relaxation content",
+      "review_ids": [20,26,45,56,61,69,73,82,84,86],
+      "example_reviews": [
+        "daily necessity calm experience",
+        "good app please please make setting turn haptic feedback I press button I really like sensation I try relax"
+      ]
+    },
+    {
+      "group_id": "G4",
+      "theme": "UI & navigation issues",
+      "review_ids": [9,56,101,132,167,179,209,217,368,379],
+      "example_reviews": [
+        "sleepcast great app get bad time ui freeze lot almost unusable need spend qa",
+        "different ui update great app mess timeline daily meditation I miss early day animation simply meditation vs focus move basic intro course hard find guidance progression"
+      ]
+    },
+    {
+      "group_id": "G5",
+      "theme": "Poor Customer Support/Renewal Charges",
+      "review_ids": [51,88,339,554,734,743,768,814,1020,1037],
+      "example_reviews": [
+        "I tired buggy app I close cancel annual renewal long back forth help resolve issue new bug week later make anything long minute unplayable exhaust",
+        "poor app poor customer supporr high cost alot issue renewal wiithout inform refund policy"
       ]
     }
   ]}

@@ -1,15 +1,244 @@
 {
   "tests": [
     {
-      "test_id": "T_auto_1",
+      "test_id": "T_auto_1_1",
       "requirement_id": "FR_auto_1",
-      "scenario": "Logging a workout without crashing",
+      "scenario": "Free user can access curated selection of free meditation guidance resources",
       "steps": [
-        "Open the workout logging screen",
-        "Enter workout details",
-        "Submit the workout"
+        "Create a new user account with no subscription",
+        "Log in to the app as the new user",
+        "Navigate to the meditation resource library"
       ],
-      "expected_result": "The workout is saved successfully and the application remains stable."
+      "expected_result": "The user can view and access a curated selection of free meditation guidance resources"
+    },
+    {
+      "test_id": "T_auto_1_2",
+      "requirement_id": "FR_auto_1",
+      "scenario": "Free user cannot access premium meditation guidance resources",
+      "steps": [
+        "Create a new user account with no subscription",
+        "Log in to the app as the new user",
+        "Navigate to the meditation resource library",
+        "Verify that a section for premium resources exists"
+      ],
+      "expected_result": "The premium resources are not accessible to the free user, with a clear indication that a subscription is required to access them"
+    },
+    {
+      "test_id": "T_auto_2_1",
+      "requirement_id": "FR_auto_2",
+      "scenario": "User views subscription options with limited budget",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Navigate to the subscription or pricing page",
+        "Review the available subscription plans"
+      ],
+      "expected_result": "The user sees a range of affordable plans with clear pricing information, including optional ad-supported free content."
+    },
+    {
+      "test_id": "T_auto_2_2",
+      "requirement_id": "FR_auto_2",
+      "scenario": "User compares subscription plans with ad-supported free content",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Navigate to the subscription or pricing page",
+        "Compare the features and pricing of different plans, including ad-supported free content"
+      ],
+      "expected_result": "The user can easily compare the features and pricing of different plans, including the option to choose ad-supported free content, and can select the plan that best fits their budget and needs."
+    },
+    {
+      "test_id": "T_auto_3_1",
+      "requirement_id": "FR_auto_3",
+      "scenario": "Stable internet connection, accessing a meditation session",
+      "steps": [
+        "Launch the mobile app",
+        "Ensure the device has a stable internet connection",
+        "Navigate to the meditation sessions page",
+        "Select a meditation session to start"
+      ],
+      "expected_result": "The meditation session loads without interruption or delay, and the user can start meditating immediately"
+    },
+    {
+      "test_id": "T_auto_3_2",
+      "requirement_id": "FR_auto_3",
+      "scenario": "Stable internet connection, accessing a sleep session",
+      "steps": [
+        "Launch the mobile app",
+        "Ensure the device has a stable internet connection",
+        "Navigate to the sleep sessions page",
+        "Select a sleep session to start"
+      ],
+      "expected_result": "The sleep session loads without interruption or delay, and the user can start the sleep session immediately"
+    },
+    {
+      "test_id": "T_auto_4_1",
+      "requirement_id": "FR_auto_4",
+      "scenario": "Accessing a cached session without internet connection",
+      "steps": [
+        "Launch the app and ensure a stable internet connection",
+        "Access and cache several meditation sessions",
+        "Disable internet connection on the device",
+        "Attempt to access a cached meditation session"
+      ],
+      "expected_result": "The app allows access to the cached session without error or interruption"
+    },
+    {
+      "test_id": "T_auto_4_2",
+      "requirement_id": "FR_auto_4",
+      "scenario": "Accessing a non-cached session without internet connection",
+      "steps": [
+        "Launch the app and ensure a stable internet connection",
+        "Disable internet connection on the device",
+        "Attempt to access a meditation session that has not been cached"
+      ],
+      "expected_result": "The app displays an error message or a 'no internet connection' message, but does not crash or become unresponsive"
+    },
+    {
+      "test_id": "T_auto_5_1",
+      "requirement_id": "FR_auto_5",
+      "scenario": "Successful navigation to meditation course",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Log in to the app with valid credentials",
+        "Navigate to the meditation courses section",
+        "Select a meditation course"
+      ],
+      "expected_result": "The app loads the selected meditation course within 2 seconds without crashing or freezing"
+    },
+    {
+      "test_id": "T_auto_5_2",
+      "requirement_id": "FR_auto_5",
+      "scenario": "Successful navigation to meditation session",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Log in to the app with valid credentials",
+        "Navigate to the meditation sessions section",
+        "Select a meditation session"
+      ],
+      "expected_result": "The app loads the selected meditation session within 2 seconds without crashing or freezing"
+    },
+    {
+      "test_id": "T_auto_6_1",
+      "requirement_id": "FR_auto_6",
+      "scenario": "Successful course progression",
+      "steps": [
+        "Launch the app and navigate to a meditation course",
+        "Complete a session within the course",
+        "Verify the progress display is updated",
+        "Verify a clear call-to-action for the next session is displayed"
+      ],
+      "expected_result": "The app displays the user's updated progress and a clear call-to-action to start the next session within the same course"
+    },
+    {
+      "test_id": "T_auto_6_2",
+      "requirement_id": "FR_auto_6",
+      "scenario": "Course completion with multiple sessions",
+      "steps": [
+        "Launch the app and navigate to a meditation course with multiple sessions",
+        "Complete all sessions within the course",
+        "Verify the progress display shows 100% completion",
+        "Verify a clear call-to-action to revisit the course or start a new one is displayed"
+      ],
+      "expected_result": "The app displays 100% completion of the course and provides a clear call-to-action to either revisit the course or start a new one"
+    },
+    {
+      "test_id": "T_auto_7_1",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Test Support Request Response Time and Resolution",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Navigate to the support section",
+        "Submit a support request with a subscription issue",
+        "Wait for 24 hours",
+        "Verify the response from the support team",
+        "Verify the response includes a clear plan to resolve the issue"
+      ],
+      "expected_result": "The user receives a response within 24 hours with a clear plan to resolve the subscription issue."
+    },
+    {
+      "test_id": "T_auto_7_2",
+      "requirement_id": "FR_auto_7",
+      "scenario": "Test Refund Request Processing and Confirmation",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Navigate to the support section",
+        "Request a refund with a valid reason",
+        "Verify the refund is processed within 3-5 business days",
+        "Verify a confirmation email is sent to the user"
+      ],
+      "expected_result": "The system automatically processes the refund within 3-5 business days and sends a confirmation email."
+    },
+    {
+      "test_id": "T_auto_8_1",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Recurring App Crash Refund",
+      "steps": [
+        "Launch the app and simulate a recurring app crash",
+        "Provide the user with a troubleshooting guide",
+        "Assume the issue persists after following the guide",
+        "Request a refund through the app's support system"
+      ],
+      "expected_result": "The user receives a full or partial refund according to the app's refund policy"
+    },
+    {
+      "test_id": "T_auto_8_2",
+      "requirement_id": "FR_auto_8",
+      "scenario": "Unsatisfied User Subscription Cancellation",
+      "steps": [
+        "Subscribe to the app's premium services",
+        "Cancel the subscription due to dissatisfaction with performance",
+        "Provide feedback through the survey"
+      ],
+      "expected_result": "The user receives a refund according to the app's refund policy and the feedback is recorded"
+    },
+    {
+      "test_id": "T_auto_9_1",
+      "requirement_id": "FR_auto_9",
+      "scenario": "Valid Login Credentials",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Tap on the 'Log In' button",
+        "Enter a valid email address associated with an existing account",
+        "Enter a valid password associated with the same account",
+        "Tap on the 'Log In' button"
+      ],
+      "expected_result": "The user is successfully logged in and redirected to the app's home screen without any errors or credential issues"
+    },
+    {
+      "test_id": "T_auto_9_2",
+      "requirement_id": "FR_auto_9",
+      "scenario": "Invalid Login Credentials",
+      "steps": [
+        "Launch the mobile mindfulness app",
+        "Tap on the 'Log In' button",
+        "Enter an invalid email address or password",
+        "Tap on the 'Log In' button"
+      ],
+      "expected_result": "The user is presented with a clear and specific error message indicating that the credentials are incorrect, and is not redirected to the app's home screen"
+    },
+    {
+      "test_id": "T_auto_10_1",
+      "requirement_id": "FR_auto_10",
+      "scenario": "User views and selects a subscription plan with clear costs and features",
+      "steps": [
+        "Launch the mobile app and navigate to the subscription plans page",
+        "Browse through the available subscription plans",
+        "Select a plan (e.g. monthly or yearly subscription)",
+        "Review the plan details, including costs, features, and terms"
+      ],
+      "expected_result": "The user can clearly see the costs, features, and terms of the selected plan, including the subscription duration, price, and any benefits or limitations."
+    },
+    {
+      "test_id": "T_auto_10_2",
+      "requirement_id": "FR_auto_10",
+      "scenario": "User compares multiple subscription plans and confirms their selection",
+      "steps": [
+        "Launch the mobile app and navigate to the subscription plans page",
+        "Browse through multiple available subscription plans",
+        "Compare the features and costs of different plans",
+        "Select a plan and review its details",
+        "Confirm their selection and proceed to payment"
+      ],
+      "expected_result": "The user can easily compare multiple plans, select one, and confirm their selection, with a clear understanding of the costs, features, and terms of the chosen plan before completing the payment process."
     }
   ]
 }
