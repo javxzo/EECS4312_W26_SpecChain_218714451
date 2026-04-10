@@ -6,7 +6,7 @@ import re
 import requests
 
 # ── Config ───────────────────────────────────────────────────────────────
-GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "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")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "PUT YOUR API KEY HERe")
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
 MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"
 
