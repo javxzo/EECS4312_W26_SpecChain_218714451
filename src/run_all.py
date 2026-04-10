@@ -77,8 +77,8 @@ def main():
         print(
             "\n[ERROR] GROQ_API_KEY environment variable is not set.\n"
             "Set it before running:\n"
-            "  Windows:  $env:GROQ_API_KEY = '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'\n"
-            "  Mac/Linux: export GROQ_API_KEY='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'"
+            "  Windows:  $env:GROQ_API_KEY = 'PUT YOUR API KEY HERE'\n"
+            "  Mac/Linux: export GROQ_API_KEY='PUT YOUR API KEY HERE'"
         )
         sys.exit(1)
 
