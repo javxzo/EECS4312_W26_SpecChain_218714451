@@ -20,9 +20,11 @@ Repository Structure:
 
 How to Run:
 1. python src/00_validate_repo.py
-2. $env:GROQ_API_KEY="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"
-3. python src/run_all.py
-4. Open metrics/metrics_summary.json for comparison results
+2. $env:GROQ_API_KEY="PUT YOUR API KEY HERE"
+3. Add your API key to 05_personas_auto.py, 06_spec_generate.py, 07_tests_generate.py, and run_all.py
+4. python src/run_all.py
+5. Open metrics/metrics_summary.json for comparison results
 
 NOTE:
 - Should you run the code and recieve this error: 429 Client Error: "Too Many Requests for url: https://api.groq.com/openai/v1/chat/completions". Please run it again after a moment.
+- The only things that were added on Tuesday were instructions about the API key. 
